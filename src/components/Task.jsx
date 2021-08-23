@@ -18,7 +18,7 @@ const TaskItems = ({selectedTab, tasks}) => {
 
     if(selectedTab === 'NEXT_7'){
         TasksToRender = TasksToRender.filter((task) => 
-            isAfter(task.date, new Date()) && isBefore(task.date, addDays(new Date(), 7))
+            (isAfter(task.date, new Date()) && isBefore(task.date, addDays(new Date(), 7)))
         )
     }
     if(selectedTab === 'TODAY'){
